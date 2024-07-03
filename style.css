@@ -1,0 +1,481 @@
+/*
+Folha de Estilo do site One Page HTML 5 e CSS3
+@autor: Nome do autor
+*/
+
+/* Importação fontes (Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* CSS Reset */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+hmtl {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em; /* em é o tamanho atual da fonte */
+}
+
+
+/* Layout */
+.Container {
+    margin: 0 auto;
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.Flex3 {
+    display:  flex;
+    flex-direction: column;
+}
+
+.Flex4 {
+    display: flex;
+    flex-wrap: wrap; /* define se ps itens ficam na mesma linha ou 
+                    podem ser quebrados em varias linhas*/
+    justify-content: space-evenly;
+}
+
+.Flex5 {
+    display: flex;
+    flex-direction: column-reverse ; /* se comporta igual ao column, porém,
+                                     pontos de início e término são invertidos*/
+}
+
+.Flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* os ítens são distribuídos na linha com o 
+                                   mesmo espaçamento entre eles*/
+}
+
+/* Botão */
+.Botao {
+    text-decoration: none; /* para adicionar uma pequena decoração a um texto*/
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
+/* topo do site */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Cartões */
+.Card {
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.Card img{
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+    margin-top: 15px;
+}
+
+.Card p{
+    text-align: left;
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+
+.Card a{
+    padding: 10px 100px;
+    border: 0;
+}
+
+/*Cabeçalho*/
+header{
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    top: 60px;
+    right: -100px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check.checked ~ ul{
+    right: 0;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Destaque */
+main{
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1{
+    font-size: 2.5em;
+}
+
+main h2{
+    font-size: 1em;
+    margin: 20px 0px 5px 0px;
+}
+
+/*Sobre*/
+#sobre{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueSobre{
+    display: none;
+}
+
+#textoSobre{
+    color: #fff;
+    padding: 0px 10px;
+}
+
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+
+.TopicosSobre{
+    margin-top: 20px;
+}
+
+.TopicosSobre img{
+    margin-right: 10px;
+}
+
+/*Conteúdo*/
+#conteudo {
+    padding: 50px 0px;
+}
+#conteudo h2{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#todos a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+/*Rodapé*/
+address {
+    padding:35px 10px 50px 10px;
+    background: url(img/background2.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a{
+    text-decoration: none;
+    color: #fff;
+}
+
+address img{
+    padding-top: 15px;
+}
+
+#iconeLocal{
+    display:none;
+}
+
+#dados{
+    margin: 30px 0px 15px 0px;
+}
+
+#googleMaps{
+    display: none;
+}
+
+footer{
+    padding: 50px 0px;
+    background-color: #343538;
+    font-size: 0.87em;
+    color: #fff;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#social{
+    margin-bottom: 25px;
+}
+
+    /*Rodapé*/
+    .Flex5{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social{
+        margin: 0;
+    }
+
+    /*Destaque*/
+    main h1{
+        font-size: 5.5em;
+    }
+    main h2{
+        font-size: 2em;
+    }
+
+/* PC */
+@media(min-width: 1200px){
+    /*Layout*/
+    .Container{
+        max-width: 1140px;
+    }
+
+    /*Cabeçalho*/
+    
+    /* Estilos para a div principal */
+.links-container {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o logo */
+.logo img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block; /* Remove espaço extra em torno da imagem */
+}
+
+/* Estilos para os links */
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #333;
+}
+
+.link-compra {
+    background-color:  #f44336; 
+}
+
+.link-venda {
+    background-color: #f44336; /* Vermelho */
+}
+
+.link-servicos {
+    background-color:  #f44336; 
+}    
+    header{
+        height: 120px;
+    }
+
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label{
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 40px;
+    }
+
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    
+    nav ul li a{
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
+    }
+
+    /*Destaque*/
+    main{
+        height: 70vh;
+    }
+
+    /*Sobre*/
+    #sobre{
+        background-attachment: fixed;
+    }
+
+    #destaqueSobre{
+        display: inline;
+    }
+
+    #destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+   /*Barra de pesuisa*/
+   form {
+        margin-top: 20px; /* Espaço acima do formulário */
+        text-align: right ; /* Centraliza o conteúdo dentro do formulário */
+    }
+    label {
+        margin-right: 10px; /* Espaço à direita do rótulo */
+       /* font-weight: bold; /* Texto em negrito */
+   }
+    input[type="search"] {
+        padding: 8px; /* Espaçamento interno */
+       width: 250px; /* Largura do campo de entrada */
+       border: 1px solid #ccc; /* Borda fina cinza */
+       border-radius: 4px; /* Borda arredondada */
+       font-size: 14px; /* Tamanho da fonte */
+   }
+    button[type="submit"] {
+        padding: 8px 20px; /* Espaçamento interno */
+        background-color: #000000; /* Cor de fundo */
+       color: white; /* Cor do texto */
+       border: none; /* Remove a borda */
+       border-radius: 4px; /* Borda arredondada */
+       cursor: pointer; /* Mostra a mãozinha ao passar por cima */
+       font-size: 14px; /* Tamanho da fonte */
+   }
+
+   /*Banner*/
+   #anime1, #anime2{
+    max-width: 100%;
+    height: auto;
+    left: 10%;
+    right: 20%;
+}
+
+#banner-anime{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+    margin:0px;
+}
+
+#banner-anime img{
+    position:absolute;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+#anime1, #banner-anime:hover #anime2 {
+    opacity: 1;
+}
+
+#banner-anime:hover #anime1, #banner-anime #anime2 {
+    opacity: 0;
+}
+ 
+    /* Rodapé */
+    .Flex6 {
+        flex-direction: row-reverse;
+    }
+ 
+    address {
+        padding-top: 50px;
+    }
+ 
+    #iconeLocal {
+        display: inline;
+    }
+ 
+    #iconeMapa {
+        display: none;
+    }
+ 
+    #googleMaps {
+        display: inline;
+    }
+}    
+

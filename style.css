@@ -223,6 +223,7 @@ main h2{
     color: #000;
     font-weight: 700;
     font-size: 1.25em;
+    right: 50%;
 }
 
 /*Rodapé*/
@@ -400,6 +401,16 @@ footer a{
         margin-right: 50px;
     }
 
+    fieldset{
+        border: 1px solid #737272;
+        padding: 1px;
+        margin-left: 1px;
+        border-radius: 5%;
+        width: 90%;
+        left: 30%;
+        
+    }
+
    /*Barra de pesuisa*/
    form {
         margin-top: 20px; /* Espaço acima do formulário */
@@ -407,7 +418,7 @@ footer a{
     }
     label {
         margin-right: 10px; /* Espaço à direita do rótulo */
-       /* font-weight: bold; /* Texto em negrito */
+       font-weight: bold; /* Texto em negrito */
    }
     input[type="search"] {
         padding: 8px; /* Espaçamento interno */
@@ -440,6 +451,7 @@ footer a{
     width: 100%;
     height: 450px;
     margin:0px;
+    right: 4%;
 }
 
 #banner-anime img{
@@ -447,6 +459,7 @@ footer a{
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: linear;
+    border-radius: 5%
 }
 
 #anime1, #banner-anime:hover #anime2 {

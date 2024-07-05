@@ -22,29 +22,51 @@ body {
     font-size: 1em; /* em é o tamanho atual da fonte */
 }
 
+/*barra preta*/
+.barrablack {
+    background-color: rgb(0, 0, 0);
+    height: 100px; /* Ajuste conforme necessário */
+    text-align: center;
+
+}
+.barrablack nav ul li a {
+    color: #ffffff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    padding: 10px 15px; /* Espaçamento interno dos links */
+    display: inline-block; /* Permite definir altura/largura e margens */
+
+}
+
+
+
+
+/* Layout */
+.Container {
+    margin: 0 auto;
+}
+
 .Flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .Flex4 {
     display: flex;
-    flex-wrap: wrap; /* define se ps itens ficam na mesma linha ou 
-                    podem ser quebrados em varias linhas*/
+    flex-wrap: wrap; /* define se ps itens ficam na mesma linha ou podem ser quebrados em varias linhas*/
     justify-content: space-evenly;
 }
 
 .Flex5 {
     display: flex;
-    flex-direction: column-reverse ; /* se comporta igual ao column, porém,
-                                     pontos de início e término são invertidos*/
+    flex-direction: column-reverse ; /* se comporta igual ao column, porém,pontos de início e término são invertidos*/
 }
 
 .Flex6 {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* os ítens são distribuídos na linha com o 
-                                   mesmo espaçamento entre eles*/
+    justify-content: space-between; /* os ítens são distribuídos na linha com o mesmo espaçamento entre eles*/
 }
 
 /* Botão */
@@ -59,53 +81,140 @@ body {
     border-radius: 25px;
 }
 
-.Container Flex{
-    background-color: #0000;
-}
-/*Barra de pesquisa*/
 
-#search-box {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: #007BFF;
-    border-radius: 5%;
-    transition: width 0.4s ease-in-out;
-    overflow: hidden;
+/* Cartões */
+.Card {
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
 }
-#search-box:hover {
-    width: 300px;
+
+.Card img{
+    border-radius: 25px 25px 0px 0px;
 }
-#search-box input[type="text"] {
-    position: absolute;
-    left: 0;
-    top: 0;
+
+.Card h3 {
+    margin-top: 15px;
+}
+
+.Card p{
+    text-align: left;
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+
+.Card a{
+    padding: 10px 100px;
+    border: 0;
+}
+
+.Card:hover{
+    transition: transform 0.3s ease;
+    transform: translateY(-20px);
+}
+
+/*Cabeçalho*/
+header{
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    top: 60px;
+    right: -100px;
     width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 16px;
-    background: transparent;
-    border-radius: 50px;
-    transition: padding 0.4s ease-in-out;
-}
-#search-box input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-#search-box button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: white;
+    transition: all 0.5s;
 }
 
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Destaque */
+main{
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1{
+    font-size: 2.5em;
+}
+
+main h2{
+    font-size: 1em;
+    margin: 20px 0px 5px 0px;
+}
+
+/*Sobre*/
+#sobre{
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueSobre{
+    display: none;
+}
+
+#textoSobre{
+    color: #fff;
+    padding: 0px 10px;
+}
+
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+
+.TopicosSobre{
+    margin-top: 20px;
+}
+
+.TopicosSobre img{
+    margin-right: 10px;
+}
+
+/*Conteúdo*/
+#conteudo {
+    padding: 50px 0px;
+}
+#conteudo h2{
+    margin-bottom: 25px;
+    text-align: center;
+}
 
 #todos a{
     text-decoration: none;
@@ -115,20 +224,226 @@ body {
     right: 50%;
 }
 
-#conteudo h2{
-    margin-bottom: 25px;
+/*Rodapé*/
+address {
+    display: inline;
+    padding:35px 10px 50px 10px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+address a{
+    text-decoration: none;
+    color: #fff;
+}
+
+address img{
+    padding-top: 15px;
+}
+
+#iconeLocal{
+    display:none;
+}
+
+#dados{
+    margin: 30px 0px 15px 0px;
+}
+
+#googleMaps{
+    display: none;
+}
+
+footer{
+    padding: 50px 0px;
+    background-color: rgb(0, 0, 0);;
+    font-size: 0.87em;
+    color: #fff;
     text-align: center;
+    border-radius: 2%;
+
 }
 
-/* Estilo para o botão ao passar o mouse */
-#search-bar button:hover {
-    background-color: #0056b3;
+footer a{
+    text-decoration: none;
+    color: #fff;
 }
 
-.barrablack {
-    background-color: black;
-    height: 100px; /* Ajuste conforme necessário */
+#social{
+    margin-bottom: 25px;
 }
+
+    /*Rodapé*/
+    .Flex5{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social{
+        margin: 0;
+    }
+
+    /*Destaque*/
+    main h1{
+        font-size: 5.5em;
+    }
+    main h2{
+        font-size: 2em;
+    }
+
+/* PC */
+@media(min-width: 1200px){
+    /*Layout*/
+    .Container{
+        max-width: 1140px;
+    }
+
+    /*Cabeçalho*/
+    
+    /* Estilos para a div principal */
+.links-container {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para o logo */
+.logo img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block; /* Remove espaço extra em torno da imagem */
+}
+
+/* Estilos para os links */
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #333;
+}
+
+.link-compra {
+    background-color:  #f44336; 
+}
+
+.link-venda {
+    background-color: #f44336; /* Vermelho */
+}
+
+.link-servicos {
+    background-color:  #f44336; 
+}    
+    header{
+        height: 120px;
+    }
+
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label{
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 40px;
+    }
+
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    
+    nav ul li a{
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
+    }
+
+    /*Destaque*/
+    main{
+        height: 70vh;
+    }
+
+    /*Sobre*/
+    #sobre{
+        background-attachment: fixed;
+    }
+
+    #destaqueSobre{
+        display: inline;
+    }
+
+    #destaqueSobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
+    fieldset{
+        border: 1px solid #737272;
+        padding: 1px;
+        margin-left: 1px;
+        border-radius: 2%;
+        width: 60%;
+        
+    }
+
+   /*Barra de pesuisa*/
+
+   #search-box{
+        position: relative;
+        padding-right: 100px;
+        height: 20px;
+        border-radius: 5%;
+   }
+
+
+   form {
+        margin-top: 20px; /* Espaço acima do formulário */
+        text-align: right ; /* Centraliza o conteúdo dentro do formulário */
+    }
+    label {
+        margin-right: 10px; /* Espaço à direita do rótulo */
+       font-weight: bold; /* Texto em negrito */
+   }
+    input[type="search"] {
+        padding: 8px; /* Espaçamento interno */
+       width: 250px; /* Largura do campo de entrada */
+       border: 1px solid #ccc; /* Borda fina cinza */
+       border-radius: 4px; /* Borda arredondada */
+       font-size: 14px; /* Tamanho da fonte */
+   }
+    button[type="submit"] {
+        padding: 8px 20px; /* Espaçamento interno */
+        background-color: #000000; /* Cor de fundo */
+       color: white; /* Cor do texto */
+       border: none; /* Remove a borda */
+       border-radius: 4px; /* Borda arredondada */
+       cursor: pointer; /* Mostra a mãozinha ao passar por cima */
+       font-size: 14px; /* Tamanho da fonte */
+   }
 
    /*Banner*/
    #anime1, #anime2{
@@ -145,7 +460,7 @@ body {
     height: 450px;
     margin:0px;
     right: 4%;
-    padding-top: 50px;
+    padding: 25px;
 }
 
 #banner-anime img{
@@ -153,7 +468,7 @@ body {
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: linear;
-    border-radius: 5%
+    border-radius: 2%
 }
 
 #anime1, #banner-anime:hover #anime2 {
@@ -163,34 +478,26 @@ body {
 #banner-anime:hover #anime1, #banner-anime #anime2 {
     opacity: 0;
 }
-
-.Card:hover{
-    transition: transform 0.3s ease;
-    transform: translateY(-10px);
-}
-
-fieldset{
-    display: flex;
-    border: 1px solid #737272;
-    padding: 1px;
-    margin-left: 1px;
-    border-radius: 25px;
-    width: 70%;
-   align-items: center;
-   flex-direction: column;
-}
-
-.Card {
-    margin-top: 25px;
-    width: 338px;
-    height: 520px;
-    background-color: #e8e8e8;
-    border: 1px solid #a1a1a1;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.Card img{
-    border-radius: 25px 25px 0px 0px;
-}
+ 
+    /* Rodapé */
+    .Flex6 {
+        flex-direction: row-reverse;
+    }
+ 
+    address {
+        padding-top: 50px;
+    }
+ 
+    #iconeLocal {
+        display: inline;
+    }
+ 
+    #iconeMapa {
+        display: none;
+    }
+ 
+    #googleMaps {
+        display: inline;
+    }
+}    
 
